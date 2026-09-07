@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const VERIFY_TOKEN = "milano_secret_123"; // غيّرها لأي كلمة تبيها
+const VERIFY_TOKEN = "milano_secret_123";
 
 app.get('/webhook/instagram', (req, res) => {
   const mode = req.query['hub.mode'];
@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
+  console.log('Server running on port ' + PORT);
 });
