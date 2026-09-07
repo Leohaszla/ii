@@ -29,7 +29,7 @@ app.get('/auth/instagram/callback', async (req, res) => {
   try {
     const params = new URLSearchParams();
     params.append('client_id', INSTAGRAM_APP_ID);
-    params.append('client_secret', APP_SECRET);
+    params.append('client_secret', INSTAGRAM_APP_SECRET);
     params.append('grant_type', 'authorization_code');
     params.append('redirect_uri', REDIRECT_URI);
     params.append('code', code);
