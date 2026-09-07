@@ -3,8 +3,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const VERIFY_TOKEN = "milano_secret_123";
-const INSTAGRAM_APP_ID = "1579440186866459";
-const INSTAGRAM_APP_SECRET = "9a0096fc7052cc308c622a0e411856e6";
+const INSTAGRAM_APP_ID = "1352862296455184";
+const INSTAGRAM_APP_SECRET = "f50211fab6a6d6d4274b64bd78aae0c7";
 const REDIRECT_URI = "https://fearless-bravery-production.up.railway.app/auth/instagram/callback";
 
 app.get('/webhook/instagram', (req, res) => {
