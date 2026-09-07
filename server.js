@@ -3,6 +3,9 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const VERIFY_TOKEN = "milano_secret_123";
+const APP_ID = "4221334814824983";
+const APP_SECRET = "c36718ba55b41c1a0b5c2352bc1b93cf";
+const REDIRECT_URI = "https://fearless-bravery-production.up.railway.app/auth/instagram/callback";
 
 app.get('/webhook/instagram', (req, res) => {
   const mode = req.query['hub.mode'];
@@ -14,6 +17,12 @@ app.get('/webhook/instagram', (req, res) => {
   } else {
     res.sendStatus(403);
   }
+});
+
+app.get('/auth/instagram/callback', (req, res) => {
+  const code = req.query.code;
+  console.log('Received code: ' + code);
+  res.send('تم استلام تسجيل الدخول بنجاح. الكود: ' + code);
 });
 
 app.get('/', (req, res) => {
