@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const VERIFY_TOKEN = "milano_secret_123";
-const APP_ID = "4221334814824983";
+const INSTAGRAM_APP_ID = "1579440186866459"; 
 const APP_SECRET = "c36718ba55b41c1a0b5c2352bc1b93cf";
 const REDIRECT_URI = "https://fearless-bravery-production.up.railway.app/auth/instagram/callback";
 
