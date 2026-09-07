@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التوثيق | منصة الودجت</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cairo', sans-serif; background: #0a0a0a; color: #ddd; display: flex; min-height: 100vh; }
+        .sidebar { width: 260px; background: #111; border-left: 1px solid #2a2a2a; padding: 1.5rem 1rem; display: flex; flex-direction: column; gap: 2rem; position: fixed; top: 0; right: 0; bottom: 0; z-index: 10; }
+        .sidebar .logo { color: #fff; font-size: 1.5rem; font-weight: 900; text-align: center; padding: 0.5rem; border-bottom: 1px solid #2a2a2a; }
+        .sidebar nav { display: flex; flex-direction: column; gap: 0.5rem; }
+        .sidebar nav a { color: #aaa; text-decoration: none; padding: 0.8rem 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.8rem; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; }
+        .sidebar nav a:hover, .sidebar nav a.active { background: #b30000; color: white; }
+        .sidebar .sidebar-footer { margin-top: auto; text-align: center; font-size: 0.8rem; color: #555; }
+        .main { flex: 1; margin-right: 260px; padding: 1.5rem; }
+        .docs-content { max-width: 800px; margin: 0 auto; background: #111; border: 1px solid #2a2a2a; border-radius: 16px; padding: 2rem; }
+        .docs-content h2 { color: #fff; margin-bottom: 1rem; }
+        .docs-content h3 { color: #ff4444; margin: 1.5rem 0 0.5rem; }
+        .docs-content p { color: #ccc; line-height: 1.8; margin-bottom: 1rem; }
+        .docs-content code { background: #1a1a1a; padding: 0.2rem 0.5rem; border-radius: 4px; color: #ff4444; font-family: monospace; }
+        .docs-content pre { background: #1a1a1a; padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1rem; }
+        .docs-content pre code { color: #ddd; }
+        @media (max-width: 768px) { .sidebar { transform: translateX(100%); } .main { margin-right: 0; } }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">منصة الودجت</div>
+        <nav>
+            <a href="dashboard.html">📊 لوحة التحكم</a>
+            <a href="widgets-list.html">📦 قائمة الودجت</a>
+            <a href="widget-builder.html">🛠️ إنشاء ودجت</a>
+            <a href="knowledge-base.html">📚 مصادر المعرفة</a>
+            <a href="analytics.html">📈 الإحصائيات</a>
+            <a href="profile.html">👤 الملف الشخصي</a>
+            <a href="pricing.html">💳 الأسعار</a>
+            <a href="docs.html" class="active">📄 التوثيق</a>
+        </nav>
+        <div class="sidebar-footer">الإصدار 1.0</div>
+    </aside>
+
+    <main class="main">
+        <div class="docs-content">
+            <h2>التوثيق</h2>
+            <p>مرحباً بك في توثيق منصة الودجت. هنا ستجد كل ما تحتاجه لبدء استخدام المنصة وإنشاء ودجت ذكي يعتمد على مصادر المعرفة الخاصة بك.</p>
+
+            <h3>1. إنشاء ودجت جديد</h3>
+            <p>اذهب إلى صفحة "إنشاء ودجت" واختر النوع (دردشة، نموذج، منبثقة). قم بتخصيص الاسم، رسالة الترحيب، الألوان، ثم اربط مصادر المعرفة التي سيعتمد عليها الودجت في الإجابات.</p>
+
+            <h3>2. إضافة مصادر المعرفة</h3>
+            <p>في صفحة "مصادر المعرفة"، يمكنك إضافة:</p>
+            <p>- روابط مواقع (سيتم قراءة المحتوى تلقائياً)</p>
+            <p>- نصوص يدوية (لصق مباشر للمحتوى)</p>
+            <p>- ملفات PDF أو TXT</p>
+            <p>الودجت لن يجيب على أي سؤال خارج هذه المصادر، مما يضمن دقة الإجابات وتخصصها.</p>
+
+            <h3>3. توليد كود التضمين</h3>
+            <p>بعد حفظ الودجت، ستجد الكود الجاهز في صفحة "قائمة الودجت". انسخ الكود وألصقه في موقعك قبل وسم <code>&lt;/body&gt;</code>.</p>
+            <pre><code>&lt;script src="https://mlbofdtmxjxjnjdwivqo.supabase.co/storage/v1/object/public/widgets/widget.js" data-widget-id="WIDGET_ID"&gt;&lt;/script&gt;</code></pre>
+
+            <h3>4. ربط النموذج اللغوي</h3>
+            <p>المنصة تدعم نماذج متعددة مثل Gemini 3.1 Flash Lite. يمكنك اختيار النموذج المناسب عند إنشاء الودجت. النموذج سيقرأ مصادر المعرفة فقط ولن يجيب من معرفته العامة.</p>
+
+            <h3>5. الإحصائيات</h3>
+            <p>تابع أداء الودجت من صفحة الإحصائيات: عدد الظهور، النقرات، المحادثات، ومعدل الرضا.</p>
+        </div>
+    </main>
+</body>
+</html>
